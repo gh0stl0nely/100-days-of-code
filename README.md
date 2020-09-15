@@ -1,8 +1,9 @@
-#100DaysOfCode Log - Round 1 - [Your Name Here]
-The log of my #100DaysOfCode challenge. Started on [July 17, Monday, 2017].
+# 100 Days Of Code - Log
 
-Log
-R1D1
-Started a Weather App. Worked on the draft layout of the app, struggled with OpenWeather API http://www.example.com
+### Day 0: September 14, 2020
 
-R1D2
+**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
+
+**Thoughts:** I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
+
+**Link to work:** 
