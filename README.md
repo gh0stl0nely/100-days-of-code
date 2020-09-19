@@ -55,3 +55,9 @@ b = a * 10; => autoboxing //
 Read more: https://codegym.cc/groups/posts/32-wrappers-unboxing-and-boxing
 
 **Thoughts:** Learned a whole lot about Java syntax! But its just a beginning!
+
+### Day 5: September 18, 2020
+
+**Today's Progress**: More practicing with type conversion, initializing variables, throwing and handling exception in Java.
+ 
+**Thoughts:** Coding in both Javascript and Java makes you appreciate Javascript more as it is a weakly typed language. Java is strongly typed, thus safer. In term of best practice, Java certainly takes the upper hand. 
