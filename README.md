@@ -92,4 +92,6 @@ In addition to 4 pillars of OOP, I was introduced to the idea of `Aggregation an
 => Aggregation is when two objects have NOT AS STRICT relationship (i.e: Car and Passenger => Car does not Passenger to function. The Passenger class can interact with other object)
 => Composition is when two objects have STRICT relationship (i.e: Car and Engine => Car OWNS and NEEDS an Engine to work. The Engine cannot interact with other things but Car, meaning Car only has ONE ENGINE) 
 
+**Link**: This is a link for Type Casting for class https://codegym.cc/quests/lectures/questcore.level02.lecture01
+
 **Thoughts:** Another day of learning Java. I love it! OOP is definitely a concept that every developer should know to become a better programmer. Mastering such concept will not only allow one to write cleaner code, but also let one to think about how to design great softwares. 
