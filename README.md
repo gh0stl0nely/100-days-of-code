@@ -95,3 +95,12 @@ In addition to 4 pillars of OOP, I was introduced to the idea of `Aggregation an
 **Link**: This is a link for Type Casting for class https://codegym.cc/quests/lectures/questcore.level02.lecture01
 
 **Thoughts:** Another day of learning Java. I love it! OOP is definitely a concept that every developer should know to become a better programmer. Mastering such concept will not only allow one to write cleaner code, but also let one to think about how to design great softwares. 
+
+### Day 7: September 20, 2020
+
+**Today's Progress**: Learned about early binding and late binding
+1) Early binding: Example of this is static method. Static method is defined at `COMPILED TIME`
+2) Late binding: Example of this is instance (non-static) method. When you override a NON-STATIC method, it will be ran at `RUN TIME`. 
+An advantage of late binding is that at run-time a method can be used on different type of objects, but it will be SLOWER because it is executed at RUN-TIME.
+
+**Thoughts:** 
