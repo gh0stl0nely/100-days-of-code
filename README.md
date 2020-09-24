@@ -1,5 +1,11 @@
 # 100 Days Of Code - Log
 
+### Day : , 2020
+
+**Today's Progress**: 
+
+**Thoughts:**:
+
 ### Day 1: September 14, 2020
 
 **Today's Progress**: Created a git workflow guide on the Github repo for our website for Git Best Practice. Worked on some more React, Material UI and SVG for Civic Tech Toronto Website. Practiced splitting code into folders for better organization and maintainence.
@@ -103,4 +109,57 @@ In addition to 4 pillars of OOP, I was introduced to the idea of `Aggregation an
 2) Late binding: Example of this is instance (non-static) method. When you override a NON-STATIC method, it will be ran at `RUN TIME`. 
 An advantage of late binding is that at run-time a method can be used on different type of objects, but it will be SLOWER because it is executed at RUN-TIME.
 
-**Thoughts:** 
+- Additional lesson is learned on the topic of objec narrowing/widening
+=> Animal pet = new Pet(); => This is WIDENING. 
+=> WildAnimal wildAnimal = new Coyote();
+  Coyote coyote = (Coyote) wildAnimal; // This is Narrowing (from WildAnimal to Coyote)
+=> Pet pet = new Animal(); // Error! // This is Error! Because Animal is a parent class but you reference it using a child class that parent class DOES NOT know about
+`Make sure WE DON'T confuse between type casting VS wrongly reference (Object of parent class being referenced by a child class)`
+
+- In addition, we learned about `ABSTRACT CLASS`. There are fews characteristics of an ABSTRACT class.
+`public abstract class ObjectA{
+  Object A = new ObjectA(); => ERRORRRR!!!! 3)
+
+  public static abstract void getA(){
+    // NO IMPLEMENTATION !!!  1) and 2)
+  }
+}`
+
+1) Marked with word `abstract`
+2) Declare method WITHOUT implementing it
+3) Cannot create an object out of ABSTRACT class
+4) ALL METHODS that are inherited from a ABSTRACT CLASS **MUST BE** implemented. Otherwise, the child class must also be considered as **ABSTRACT** class. These are good restrictions though :) We don't want every child class to just extends the parent class without any restriction. 
+
+- Jumping ahead! I got a headstart with Interface today. Interface is like Abstract class.
+
+`interface Drawable {
+  void draw();
+}`
+1) Interface can only EXTENDS **MULTIPLE** Interfaces
+2) Classes can IMPLEMENTS **MULTIPLE** interfaces
+
+Some important advantages of Interface:
+1) Multiple inheritance (with interface)
+2) Separate method definition vs method implementation (interface does not implement any methods but its child class that implements it will do it.
+
+Interface represents more of ABILITIES (in term of method) than the object itself. You don't really say `Car as a class but Drivable as a Interface`
+
+** Links**: https://codegym.cc/groups/posts/106-widening-and-narrowing-of-reference-types
+
+https://codegym.cc/quests/lectures/questcore.level02.lecture08 - Thinking about Interface
+
+**Thoughts:** Making more progress with Java! Happy :)
+
+### Day 8: September 23, 2020
+
+**Today's Progress**: More CSS.
+
+**Thoughts:**: Just tweaking things. My CSS skill is getting a bit better?
+
+### Day 9: September 24, 2020
+
+**Today's Progress**: 
+
+**Thoughts:**:
+
+
