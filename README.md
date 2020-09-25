@@ -158,8 +158,18 @@ https://codegym.cc/quests/lectures/questcore.level02.lecture08 - Thinking about 
 
 ### Day 9: September 24, 2020
 
+**Today's Progress**: Completed my tasks assigned by the volunteer group.Took 2 hours on CSS, learned about breakpoints in Material UI to manipulate responsiveness. Shifted gear back to Java to learn more about the difference Interface, Abstract Class and normal classes.
+- Interface provides `LOOSE COUPLING CODE`. 
+- Interface does NOT have `STATE` but ONLY BEHAVOIUR while Abstract Classes `DO BOTH`
+- Interface describes BEHAVIOUR so many **UNRELATED CLASSES** can implement it. Abstract Classes are like a blueprint and only a parent of **RELATED CLASSES**
+- Multiple inheritance only apply to interface not classes.
+
+*** WHEN INHERTING A PARENT CLASS, THE SUBCLASS CAN ACCESS THE FIELDS DIRECTLY!! ***
+
+**Thoughts:**: Not a bad day, actually spend more time than I expected on CSS. 
+
+### Day 10: September 25, 2020
+
 **Today's Progress**: 
 
 **Thoughts:**:
-
-
