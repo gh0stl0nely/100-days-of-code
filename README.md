@@ -177,7 +177,7 @@ https://codegym.cc/quests/lectures/questcore.level02.lecture08 - Thinking about 
 ### Day 11: September 26, 2020
 
 **Today's Progress**: Review some Git Concept
-- Git rebase: when you checkout a branch and rebase another branch (`git checkout khoi, git rebase master`), this means you are putting changes in `khoi` branch into master into a new commit but now it is linear. Then you `git checkout master, git rebase khoi` , this will again put all the changes from rebased `khoi` into master  and now they are both up to date. 
+- Git rebase: when you checkout a branch and rebase another branch (`git checkout khoi, git rebase master`), this means you are putting all changes from `master` onto `khoi` in a linear manner. Then you `git checkout master, git rebase khoi` , this will again updates master up-to-date with khoi.
 
 - HEAD: A HEAD points to a most recent commit. You can checkout a commit `git checkout commit1` or a branch `git checkout branch-khoi`. Detaching head basically means putting head at a different location (most likely a previous commit or branch)
 
