@@ -170,6 +170,56 @@ https://codegym.cc/quests/lectures/questcore.level02.lecture08 - Thinking about 
 
 ### Day 10: September 25, 2020
 
+**Today's Progress**: More CSS and learning about Git concepts.
+
+**Thoughts:** My git knowledge is getting stronger wohahaha
+
+### Day 11: September 26, 2020
+
+**Today's Progress**: Review some Git Concept
+- Git rebase: when you checkout a branch and rebase another branch (`git checkout khoi, git rebase master`), this means you are putting changes in `khoi` branch into master into a new commit but now it is linear. Then you `git checkout master, git rebase khoi` , this will again put all the changes from rebased `khoi` into master  and now they are both up to date. 
+
+- HEAD: A HEAD points to a most recent commit. You can checkout a commit `git checkout commit1` or a branch `git checkout branch-khoi`. Detaching head basically means putting head at a different location (most likely a previous commit or branch)
+
+- Relative refs and `^` operator: When you want to reference a commit, you refer to it with a hash `fed12390218309128390` , very long but Git can accept `fed12` as a hash also (Smart guy!)
+** You can move up a COMMIT by `^` 
+** You can move up **SEVERAL** commits by `~<num>`
+
+For instance, `git checkout master^` => ** This comment is to find the parent of the master branch, BASICALLY GO BACK A COMMIT from the current commit ** 
+or more specifically `git checkout HEAD^` => Go back to one commit BEFORE HEAD! ( A PREVIOUS COMMIT BEFORE THE **CURRENT COMMIT (HEAD)** WE ARE ONE)
+
+You can also do this `git checkout (COMMIT HASH)^` => This will go to that commit using the hash and jump backward by one commit! 
+
+- The `~` operator: Like `^` but instead of go backward by one commit, you can go back by several commits :) 
+
+Exercise: Guess what does this do : `git branch -f master HEAD~4` ? => Answer: Force master branch to go back to 4 commits before current commit (HEAD). 
+
+- `git reset` vs `git revert`: Mostly similar for REWRITING HISTORY, but RESET works for local branch where as REVERT works for remote branch.
+
+** `git reset (Commit)^ or ~` **: So `git reset HEAD~4` meaning on your CURRENT BRANCH, it will go all the way back to 4 commits before HEAD. Remember, once you reset, the commits will that you made so far will ** BEGONE ** => VERY DANGEROUS (git reset (commit hash)~2 is going back to 2 commits before that commit with that hash 
+
+** `git revert HEAD` ** : This commands mean that on the current **REMOTE* branch, Git revert also takes a specified commit, however, `git revert` does not move ref pointers to this commit. A revert operation will take the specified commit, inverse the changes from that commit, and create a new "revert commit. Instead of deleting or orphaning commits in the commit history, a revert will create a new commit that inverses the changes specified. Git revert is a safer alternative to git reset in regards to losing work
+
+- `git cherry-pick <CommitHash1> <commithash2> ...`: This is quite similar to rebase (a SELECTIVE rebase so to speak), but few differences:
+=> You are perfomring cherry picking from your current branch (meaning `git cherry-pick C1 C2` and you are on `khoi` branch, then C1 and C2 (commits) will be rebased (linearly added) onto khoi branch whereas rebase will be performed from another branch that you want to rebase onto (`git checkout master, git rebase khoi` => Adding master changes into khoi.
+
+- ** Interactive rebase ** - `git rebase -i master`: CherryPicking works pretty well **IF YOU KNOW THE COMMIT HASHES TO ADD ONTO THE BRANCH**, but without the, we need INTERACTIVE REBASE. 
+=> When performing interactive rebase, a UI will open in code editor to showcase the list of commit messages and hashes that are about to be copied onto the target branch.
+** IMPORTANT **: Remember that when choosing which commits to rebase, you can also CHOOSE THE ORDER THAT EACH COMMITS WILL BE PLACED ON THE BRANCH AND WHICH COMMITS TO OMIT.
+
+- `git tag <Tagname> <Commit hash>` : This applies a tag name to a specific commit
+
+- `git describe <ref>` : Ref is anything can be resolved into a commit. If left blank it will defualt to HEAD. By applying this command, the output is `<tag>_<numbCommit>_g<hash>
+=> Where`tag` is the closest ancestor tag in history, `numCommits` is how many commits away that tag is, and `hash` is the hash of the commit being described.
+
+- Some shortcuts for pulling  => `git pull --rebase` => This will fetch the remote of that branch, and rebase our local branch on top of that remote branch (so basically you rebase origion/<local_branch> :) => So technically merge/rebase technically updates **THE CURRENT BRANCH THAT YOU ARE ON** with the changes of the branch you are combining with !!! 
+
+Link: https://learngitbranching.js.org/ => Try to do mixed bag questions again! Quite interesting. 
+
+**Thoughts:**: These exercises took me from Level 1 git to Level 3 git user... 
+
+### Day 12: September 27, 2020
+
 **Today's Progress**: 
 
 **Thoughts:**:
