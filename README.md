@@ -234,10 +234,8 @@ Note: `git push origin :foo` => This will delete the remote foo... be careful th
 
 Link: https://learngitbranching.js.org/ => Try to do mixed bag questions again! Quite interesting. 
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 **Thoughts:**: These exercises took me from Level 1 git to Level 3 git user... 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Day 12: September 27, 2020
 
 **Today's Progress**: 
