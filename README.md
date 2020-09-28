@@ -1,3 +1,7 @@
+Important dates: 
+1) Git concepts: on Day 11, September 26, 2020. 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # 100 Days Of Code - Log
 
 ### Day : , 2020
@@ -174,6 +178,7 @@ https://codegym.cc/quests/lectures/questcore.level02.lecture08 - Thinking about 
 
 **Thoughts:** My git knowledge is getting stronger wohahaha
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Day 11: September 26, 2020
 
 **Today's Progress**: Review some Git Concept
@@ -214,7 +219,22 @@ Exercise: Guess what does this do : `git branch -f master HEAD~4` ? => Answer: F
 
 - Some shortcuts for pulling  => `git pull --rebase` => This will fetch the remote of that branch, and rebase our local branch on top of that remote branch (so basically you rebase origion/<local_branch> :) => So technically merge/rebase technically updates **THE CURRENT BRANCH THAT YOU ARE ON** with the changes of the branch you are combining with !!! 
 
+- `git branch -u  o/master(remote branch) <localName>` : This commands set the **EXISTING Local Branch** to track remote master branch (SO WHENEVER YOU PUSH FROM LOCAL, you will push to remote master on that Local Branch
+
+- `git checkout -b <local_Branch> origin/master`: This commands is same as the above but it will create a branch and set its remote tracking to origin/master
+
+- `git push origin <source>:<destination>`: Push from the local branch to another remote branch in origin. `git push origin khoi:demi` => Push changes from khoi branch to demi remote branch. 
+
+Note: `git push origin :foo` => This will delete the remote foo... be careful though
+`git fetch origin :foo` => This will create another LOCAL branch called "foo" @@  
+
+- `git fetch origin <remote_source>:<local_branch>`: Fetch and combine changes from a remote branch to a local branch (if not existed). **NOTE** THIS DOES NOTT AFFECT THE CURRENTLY CHECKED OUT BRANCH.
+
+- `git pull origin master:demi`: So say if you are on `khoi` and you run that command. THe commands will fetch all the commits from master REMOTE and put it onto a branch `demi`. and then `merge` with `khoi`.  => Like this `git fetch origin master:demi -> git merge demi` WITH KHOI! So now Khoi has a NEW commit that combines the current HEAD from khoi and all changes associated with demi, pulled from remote master. 
+
 Link: https://learngitbranching.js.org/ => Try to do mixed bag questions again! Quite interesting. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Thoughts:**: These exercises took me from Level 1 git to Level 3 git user... 
 
