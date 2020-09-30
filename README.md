@@ -238,6 +238,35 @@ Link: https://learngitbranching.js.org/ => Try to do mixed bag questions again! 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Day 12: September 27, 2020
 
+**Today's Progress**: Learned about React Lazy loading and loadable components. Failed to provide lazy solution for slow image rendering, although successful in term of providing a facade that covers up the main problem... 
+
+Learning more about Java interface and how to implement interface
+=> When a CLASS implements an interface, all inherited methods must be DECLARED "PUBLIC" otherwise will throw an ERROR of weaker access priviledge. 
+
+When writing LARGE APPLICATION, developers will
+1) Identify all abilities/roles.
+2) Define the interaction between these roles.
+3) Then simply assign roles to all the classes.
+
+What is a Stream in Java? A `stream` is an Entity for exchanging data. These are TWO MAIN STREAM INTERFACES.
+-> 1) InputStream: To read data
+-> 2) OutputStream: To write data
+Classes that extend these are FileInput/OutputStream, 
+
+Link: https://codegym.cc/quests/lectures/questcore.level03.lecture07
+
+**Thoughts:**: Another day of happy Java coding :) Learned a lot about Stream writer, how to close it
+
+### Day 13: September 28, 2020
+
+Using FileInputStream and BufferedReader: https://codegym.cc/quests/lectures/questcore.level03.lecture11
+
+**Today's Progress**: More java and input and output stream (I/O)
+
+**Thoughts:**: Good day, a bit of headache, cannot do much..
+
+### Day 14: September 29, 2020
+
 **Today's Progress**: 
 
 **Thoughts:**:
