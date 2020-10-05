@@ -267,6 +267,96 @@ Using FileInputStream and BufferedReader: https://codegym.cc/quests/lectures/que
 
 ### Day 14: September 29, 2020
 
-**Today's Progress**: 
+**Today's Progress**: Reviewed narrowing and widening of reference type. When you widen (up to Object, up to chain), you would not need to do type casting, but if you narrow (go down the chain to child class, you will have to specify type). 
 
-**Thoughts:**:
+`public static void main(String[] args){
+  Object obj = new Tiger();
+  Animal animal = (Animal) obj;
+  Cat cat = (Cat) obj;
+  Tiger tiger = (Tiger) animal;
+  Tiger tiger2 = (Tiger) cat;
+}`
+
+- This should be important (ChildClass obj).methodCall(); => When in a switch of if statement if the method passed in `obj` with a parent class 
+
+Link: https://codegym.cc/quests/lectures/questcore.level04.lecture03
+
+**Thoughts:**: More Java, More happiness :)
+
+### Day 15: October 1, 2020
+
+**Today's Progress**: Did an exercise on Singleton! Very interesting Design Pattern in which you only create **ONE** instance of it via getInstance() and **declare private constructor** so people won't be able to create a Singleton.
+
+4 types of access modifier **BY LEVEL**:
+1) Public: This variable or method can be used by anything in the program (no restrictions)
+2) Protected: A bit better than package private (or default). Basically same as default, but **OUTSIDE PACKAGE CHILDREN CLASSES** can access this field. 
+3) Default (or package private): This variable or method can only be used where it is defined **IN ITS OWN PACKAGE** => Meaning other classes AND **OUtSIDE PACKAGE CHILDREN CLASS** **CANNOT** use it.
+4) Private: This variable or method can be used only within the class (LOWEST FLEXIBILITY)
+
+**Thoughts:**: :)
+
+# 100 Days Of Code - Log
+
+### Day 16: October 3, 2020
+
+**Today's Progress**: Learned more about Method Overloading. Parameter will ALWAYS widen (expand) to the top of chain. 
+So if print((short) 1) and method is print(double i) => It will still print :) 
+
+- When a class is loaded, it is loaded from top to bottom. from fields -> CONSTRUCTOR -> methods. What will this code block gives? 
+
+`
+class Cat
+{
+ public int a = getSum();
+ public int b = getSum() - a;
+ public int c = getSum() - a - b;
+
+ public getSum()
+ {
+  return a + b + c;
+ }
+}`
+
+=> It would return 0 0 0 because getSum() has not been declared when constructor is called (automatically). **ALSO BECAUSE a b c default's values are 0**
+
+- Also, learn about **STATIC BLOCK**, a static block is loaded => Basically, everything in static block is ran first when executing.
+` 
+    public static int A;
+    public static int B;
+    public static int MIN;
+    
+    static {
+        try {
+        BufferedReader b = new BufferedReader(new InputStreamReader(System.in));
+        A = Integer.parseInt(b.readLine());
+        B = Integer.parseInt(b.readLine());
+        MIN = min(A, B); // return min of 2 number 
+        b.close();
+        } catch(IOException e){
+            System.out.println(e);
+        }
+    }
+`
+
+- Also , **NON STATIC BLOCK OR INSTANCE INITIALIZATION BLOCK** will execute **BEFORE EVERY TIME A CONSTRUCTOR FUNCTION IS CALLED** 
+`{
+ // These codes in here will execute before constructor functions are called 
+}`
+
+1) Only once in memory 
+2) before any constructor calls (or whenever an object is initialized) .
+
+Link, good reminder that if you don't declare a constructor, it will declare one for you by default and when you inherit the class, the child class will call the parent constructor **AND** parent's variable first  (if used super()) => ** BASICALLY `extends` is the keyword to also automatically call super() in the child class if constructor function not defined **
+
+Link: https://codegym.cc/quests/lectures/questcore.level05.lecture05
+https://codegym.cc/quests/lectures/questcore.level05.lecture08
+
+**Thoughts:**: :)
+
+### Day 17: October 4, 2020
+
+**Today's Progress**: Learned about the basic of `Template Pattern`. A template pattern allows us to override parts of an algorithm while following pre-created structure. For instance, a base class has an algorithm that would have 2 methods assess() and build(). But when different class extends this base class will have the flexility to override its own assess() and build() methods while following the required structure of the original algorithm (usually `final`).
+
+To store a very big number, use java.math.BigInteger or java.math.BigDecimal
+
+**Thoughts:**: :)
