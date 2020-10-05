@@ -1,5 +1,6 @@
 Important dates: 
 1) Git concepts: on Day 11, September 26, 2020. 
+2) To do when have time https://codegym.cc/quests/lectures/questcore.level05.lecture12 - Request parser
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 100 Days Of Code - Log
