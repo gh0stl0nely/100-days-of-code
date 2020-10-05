@@ -360,4 +360,14 @@ https://codegym.cc/quests/lectures/questcore.level05.lecture08
 
 To store a very big number, use java.math.BigInteger or java.math.BigDecimal
 
+Life cycle of object creation
+1) Static variables of parent class initialized
+2) Static variables of child class initialized
+3) Non static variables of parent initialized
+4) Constructor of parent class invoked 
+5) Non static variables of child initialized
+6) Constructor of child class
+**Lesson learned** => Static variables go first! Then non-static varilables of parent, then non-static variable of child then constructor of parent and child. 
+Static > Non static var > constructor https://codegym.cc/groups/posts/249-sequence-of-actions-during-object-creation
+
 **Thoughts:**: :)
