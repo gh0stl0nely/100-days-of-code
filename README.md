@@ -371,3 +371,76 @@ Life cycle of object creation
 Static > Non static var > constructor https://codegym.cc/groups/posts/249-sequence-of-actions-during-object-creation
 
 **Thoughts:**: :)
+
+### Day 18: October 5, 2020
+
+**Today's Progress**: What is a thread? A program can spawn little robots to execute some codes and commands. If we want the program to execute some other commands **IN PARALLEL** to the current robot (thread), the program will spin off another robot (thread) and asks it to do those tasks. These are **MULTITHREADING** (MULTITASKING?). In term of computer science, the computer only has **ONE** processor, and the processor will switch between threads (probably can think of threads like a **PATH** that the computer takes to finish a certain task. 
+
+How to start a thread
+1) Create a thread object
+2) Wrap the task you want to run inside that object
+3) run this.start() on it 
+`
+class Printer implements Runnable
+{
+public void run()
+{
+System.out.println("I’m printer");
+}
+}
+
+public static void main(String[] args)
+{
+Printer printer = new Printer();
+Thread childThread = new Thread(printer);
+childThread.start();
+}`
+
+In a program, Java has one thread called the "MAIN THREAD". The main thread runs the main() methods and ends, whereas child thread like the one above will run once its called and then end. 
+
+** IMPORTANT REGARDING THREAD ** : To tell a Thread what method to execute, the class must implement the `Runnable` interface. For the Thread object, it has the constructor
+
+1) Your class must implement Runnable tinterface `Thread(Runnable runnable)` => runnable is an object that implements Runnable interface that has run(). And within run() method, you can write whatever you want in there
+`public static void main(String[] args)
+{
+Printer printer = new Printer("Natasha");
+
+Thread thread1 = new Thread(printer);
+thread1.start();
+
+Thread thread2 = new Thread(printer);
+thread2.start();
+
+Thread thread3 = new Thread(printer);
+thread3.start();
+}` => Multithread running
+
+2) Your class must extends Thread class `YourClass extends Thread` => All you have to do is overwrite the run() method in your class and create object of your class and runs start() on it. => Shortcoming for extending a Thread is that you cannot have another parent class AND you **CANNOT** have multiple threads created from one object. 
+
+`YourClass extends Thread {
+  public void run(){ //something} 
+}
+
+public static void main(String[] args)
+{
+Printer printer = new Printer("Jack");
+printer.start();
+
+Printer printer2 = new Printer("Jack");
+printer2.start();
+
+}
+`
+
+**THE START() method executes run() method once called** 
+
+- Thread stopping: For instance, in the main method, you create a child thread and call childThread.**join()** => This says that the **MAIN THREAD** will stop execution and wait until childThread finishes executing! 
+
+
+**Thoughts:**:
+
+### Day 19: October 6, 2020
+
+**Today's Progress**: Making stuff responsive with pure CSS 
+
+**Thoughts:**: Crazy 3 hours filled with CSS..
