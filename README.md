@@ -444,3 +444,21 @@ printer2.start();
 **Today's Progress**: Making stuff responsive with pure CSS 
 
 **Thoughts:**: Crazy 3 hours filled with CSS..
+
+### Day 20: October 7, 2020
+
+**Today's Progress**: 
+- Learned more about join() => If you call join() on a child thread, then the parent thread will stop execution until that particular child thread finishes execution.
+- getName() is a method 
+- Volatile keyword **: This is a keyword that says a variable will be shared between different threads, therefore it will be stored in the MAIN MEMORY INSTEAD OF a CPU CACHE**. This keyword makes a variable CPU safe. Think about if there are several threads writing and reading one single variables, we cannot ensure that all threads will read and write the most updated variable :)
+- Thread.sleep(): Make the program sleeps :) When is it used best? It is used best in a child thread when it `doesn't need` to run something regularly NON-STOP.
+- setPriority(MAX_PRIORITY): the parameter is an int to represent what is the priority of the thread. setPriority is just a method to set the priority of each thread.
+
+** YOU CANNOT STOP A THREAD!! IT CAN STOP ITSELF ** BY SETTING A BOOLEAN AND WAIT AFTER A WHILE IT WILL STOP THE THREAD
+
+
+(OFFICIAL): STOP THREAD USING isInterrupted() and interrupt(): https://codegym.cc/quests/lectures/questcore.level06.lecture09
+(UNOFFICIAL) LINK TO READ MORE ABOUT IT: https://codegym.cc/quests/lectures/questcore.level06.lecture08
+
+
+**Thoughts:**:
