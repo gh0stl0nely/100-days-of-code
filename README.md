@@ -1,6 +1,23 @@
 Important dates: 
 1) Git concepts: on Day 11, September 26, 2020. 
 2) To do when have time https://codegym.cc/quests/lectures/questcore.level05.lecture12 - Request parser
+3) Java execution process:
+- Source code (file.java) -> Java compiler -> Byte code -> Java interpreter -> Machine code.
+Terminology:
+4) Interesting problem about UncaughtExceptionHandler: https://codegym.cc/quests/lectures/questcore.level06.lecture13 (Last exercise) + https://medium.com/@yosimizrachi/advanced-exception-handling-thread-uncaughtexceptionhandler-c72e013da092 - Look at October 12 for some explanation
+5) Volatile vs Synchronized https://stackoverflow.com/questions/3519664/difference-between-volatile-and-synchronized-in-java
+ - Thread safe => i) Memory visibility and ii) execution control
+6) Static block only runs once when it is loaded by ClassLoader. Read this for information on locking the Class so that it only initialized once! https://codegym.cc/help/1314#discussion
+7) Computer has memory that stores data and codes. The PROCESSOR (CPU or central processing unit) is the one that executes these codes, grab data from memory to read and write it back to memory. To spreap up computation, the process uses cache or CPU cache where it stores most of its most used variables.  https://codegym.cc/quests/lectures/questcore.level07.lecture05
+----------
+- Multithreading:
+- Deadlock
+- Early bindng vs Late binding:
+------------
+Patterns learned so far:
+- Singleton - To return the same object, you can do a null check => If the only Instance is null, then you can initialized it and return, but if not, then just return that only instance that has already been initialized. 
+- Template 
+- Factory 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 100 Days Of Code - Log
@@ -460,5 +477,44 @@ printer2.start();
 (OFFICIAL): STOP THREAD USING isInterrupted() and interrupt(): https://codegym.cc/quests/lectures/questcore.level06.lecture09
 (UNOFFICIAL) LINK TO READ MORE ABOUT IT: https://codegym.cc/quests/lectures/questcore.level06.lecture08
 
+### Day 21: October 8 , 2020
 
-**Thoughts:**:
+**Today's Progress**: 
+
+- More about threadInterruption
+-> threadObject.interrupt() => To interrupt a thread
+-> threadObject.isInterrupted() => Return boolean whether it is interrupted or not
+
+Benefit of Multithreading:
+1) Paralelism/ Simultaneous Execution - https://codegym.cc/groups/posts/108-multithreading-in-java-what-it-is-its-benefits-and-common-pitfalls
+-> Heavy calculation on one thread, draw or do something else in another thread.
+
+Bad of Multithreading:
+1) Programmer CANNOT control order of thread execution! Parallel DOES NOT MEAN Sequential
+2) **Deadlock**: When threads are waiting for objects that are hold in other thread... So its like a vicious cycle that thread one waits for thread two but thread two is also waiting for thread one... => You need experience to get a job but how can you get experience if you don't have a job? 
+3) **Race Condition**: Basically you write a program that requires sequential execution but instead you do them in parallel (no sequential order!). 
+
+**Thoughts:**: Good stuff!
+
+### Day 22: October 9, 2020
+
+**Today's Progress**: Join() method is FINAL!  
+
+**Thoughts:**: Dammit lots of practice lulz
+
+
+### Day 23: October 10, 2020
+
+**Today's Progress**: stop() is deprecated, use interrupt() and isInterrupted(). 
+
+- Learned about UncaughtExceptionHandler interface
+=> Explanation on how to implement: **Problem** We don't have time to wrap try catch block around every block of code... So we need to handle those uncaught exceptions somehow right? 
+**Solution**: We have an interface called `Thread.UncaughtExceptionHandler` that belongs to the Thread class. The Thread class belongs to a ThreadGroup. If one Thread is terminated, before it does, it will terminate and call its own UncaughExceptionHandler. If it does not have one, it will use ThreadGroup's handler. If ThreadGroup does not have one, it will use the default UncaughtExceptionHandler. 
+
+- More on `synchronized` keyword. Like `synchronized(this){ // some codes}`. This essentially says that when the thread enters this block of code, Java Virtual Machine will lock the mutex of this object (inside the parenthesis). As soon as the code block finishes execution, the mutex is unlocked, the old thread leaves and the new thread comes in. This is like a restroom sign (restroom sign = mutex, an indication). `this` is the object that this method is being called on, but another parameter can be passed in, and that parameter becomes the "MONITOR". 
+
+- A static block also contains synchronized keyword already but you can also put different "guard" 
+
+- Computer has memory that stores data and codes. The PROCESSOR (CPU or central processing unit) is the one that executes these codes, grab data from memory to read and write it back to memory. To speed up computation, the process uses cache or CPU cache where it stores most of its most used variables. 
+
+**Thoughts:**: 
