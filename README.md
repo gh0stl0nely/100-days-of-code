@@ -1,6 +1,10 @@
+
+Open Source Project: https://codegym.cc/groups/posts/383-top-8-open-source-github-projects-to-level-up-your-coding?utm_source=eSputnik-$email-digest-36&utm_medium=email&utm_campaign=$email-digest-36&utm_content=868856112
+
 Important dates: 
 1) Git concepts: on Day 11, September 26, 2020. 
 2) To do when have time https://codegym.cc/quests/lectures/questcore.level05.lecture12 - Request parser
+- https://codegym.cc/quests/lectures/questcore.level07.lecture10 - List implementation 
 3) Java execution process:
 - Source code (file.java) -> Java compiler -> Byte code -> Java interpreter -> Machine code.
 Terminology:
@@ -9,10 +13,17 @@ Terminology:
  - Thread safe => i) Memory visibility and ii) execution control
 6) Static block only runs once when it is loaded by ClassLoader. Read this for information on locking the Class so that it only initialized once! https://codegym.cc/help/1314#discussion
 7) Computer has memory that stores data and codes. The PROCESSOR (CPU or central processing unit) is the one that executes these codes, grab data from memory to read and write it back to memory. To spreap up computation, the process uses cache or CPU cache where it stores most of its most used variables.  https://codegym.cc/quests/lectures/questcore.level07.lecture05
+8) Object-level lock and Class-level lock:
+=> 1) Object level lock: So remember that each object has a **LOCK** or **MUTEX**, if the thread wants to access this object, it needs to obtain the lock of that object.  
+=> 2) Class level lock: If a thread wants to execute **STATIC** method, it needs to acquire CLASS LEVEL LOCK. But once thread acquires the class level block, it can execute **ANY** static SYNCHRONIZED methods 
+https://www.tutorialspoint.com/object-level-lock-vs-class-level-lock-in-java#:~:text=Every%20class%20in%20Java%20has,synchronized%20method%20of%20that%20class.
+9) How does computer work under the hood ? (Signal from mouth click -> I/O sub system -> CPU -> Fetch instruction from memory -> Execute) https://codegym.cc/quests/lectures/questcore.level07.lecture09
+10) Why is HashMap **NOT** thread-safe? Remember, HashMap uses a dynamic array under the hood and uses hash function given the key to find the index inside that dynamic array that stores the value. Whenever a new item is added (put) onto the hashmap, the internal array may call `array.resize()`. But if there are multiple threads accessing the same hash map, the array may be under going **resizing**, so the new array is practically EMPTY and so calling get() will return null => **THREAD UNSAFE**
+
 ----------
 - Multithreading:
 - Deadlock
-- Early bindng vs Late binding:
+- Early bindng vs Late binding: Early binding guarantees function can be executed at compile time (i.e: Overloadded function call, static block calls ?), Late binding executes at run-time.
 ------------
 Patterns learned so far:
 - Singleton - To return the same object, you can do a null check => If the only Instance is null, then you can initialized it and return, but if not, then just return that only instance that has already been initialized. 
@@ -518,3 +529,33 @@ Bad of Multithreading:
 - Computer has memory that stores data and codes. The PROCESSOR (CPU or central processing unit) is the one that executes these codes, grab data from memory to read and write it back to memory. To speed up computation, the process uses cache or CPU cache where it stores most of its most used variables. 
 
 **Thoughts:**: 
+
+### Day 24: October 11,2020
+
+**Today's Progress**
+- String Buffer vs String Builder: Always use StringBuffer because String Builder is **NOT** thread-safe but String Builder is.
+- Encoding: Is basically transforming data into another form. But encoding IS NOT 100% SAFE. Because program can be created to decode it! (ie: URL encode, Base64, Unicode)
+- Encrytion: Is a form of data protecting. The process will also contain another **SECRET KEY** that only the creator knows about. 
+- Hashing: Give an input, go through an algorithm, provide an output. But one input will only have one unique output. This CANNOT be reversed (Output -> Input). 
+
+Encryption vs Hashing
+- Encryption is TWO-WAY conversion. You can use the same SECRET KEY to convert, whereas Hasing is a ONE-WAY conversion, one input = one unique output. 
+
+- Object-level lock and Class-level lock:
+=> 1) Object level lock: So remember that each object has a **LOCK** or **MUTEX**, if the thread wants to access this object, it needs to obtain the lock of that object.  
+=> 2) Class level lock: If a thread wants to execute **STATIC** method, it needs to acquire CLASS LEVEL LOCK. But once thread acquires the class level block, it can execute **ANY** static SYNCHRONIZED methods 
+https://www.tutorialspoint.com/object-level-lock-vs-class-level-lock-in-java#:~:text=Every%20class%20in%20Java%20has,synchronized%20method%20of%20that%20class.
+https://codegym.cc/groups/posts/110-thread-synchronization-the-synchronized-operator
+
+- yield(): We know that processor switches threads to execute code. Quantum = processor's time. So each thread gets some quantum (processor's time). Thread.yield() means to give up the thread's quantum early... And allows processor to switches to another thread faster... 
+
+**Thoughts:**:
+
+### Day 25: October 12, 2020
+
+**Today's Progress**: 
+- Read and write to all primitive types except of LONG and Double are **ATOMIC**. Meaning that if there are 2 threads, one writes the int value, and the second read the int value. The second thread may read the old OR new value, no in between... But this does NOT apply to `long` and `double`.
+- Comparable interface contains only ONE method => compareTo(Object o), returns a positive number (or 1) if this.props > o.props, negative (-1) if this.props < o.props and 0 if this.props == o.props. 
+- Why is HashMap **NOT** thread-safe? Remember, HashMap uses a dynamic array under the hood and uses hash function given the key to find the index inside that dynamic array that stores the value. Whenever a new item is added (put) onto the hashmap, the internal array may call `array.resize()`. But if there are multiple threads accessing the same hash map, the array may be under going **resizing**, so the new array is practically EMPTY and so calling get() will return null => **THREAD UNSAFE**
+
+**Thoughts:**:
