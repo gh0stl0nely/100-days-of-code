@@ -559,3 +559,18 @@ https://codegym.cc/groups/posts/110-thread-synchronization-the-synchronized-oper
 - Why is HashMap **NOT** thread-safe? Remember, HashMap uses a dynamic array under the hood and uses hash function given the key to find the index inside that dynamic array that stores the value. Whenever a new item is added (put) onto the hashmap, the internal array may call `array.resize()`. But if there are multiple threads accessing the same hash map, the array may be under going **resizing**, so the new array is practically EMPTY and so calling get() will return null => **THREAD UNSAFE**
 
 **Thoughts:**:
+
+**Day 26**: October 16, 2020
+
+Today's Progress: CRUD operation! 
+- To set command line argument (or use String[] args) => 1) Run 2) Edit Configs 3) Program argument 4) Seperate eacn with a space and string is wrapped within " " 
+(i.e: c Washington m "04 15 1990")
+- For CRUD operation, the variables should be volatiled if there are multiple threads changes it. Also, each thread should only be able to do one operation inside a synchronized block. 
+
+Thoughts: Some practice with Crud
+
+### Day 27: October 17, 2020
+
+**Today's Progress**: 
+
+**Thoughts:**:
