@@ -1,12 +1,14 @@
 
 Open Source Project: https://codegym.cc/groups/posts/383-top-8-open-source-github-projects-to-level-up-your-coding?utm_source=eSputnik-$email-digest-36&utm_medium=email&utm_campaign=$email-digest-36&utm_content=868856112
 
+Interpreter (line by line but slow) vs Compiler (everything to machine code, faster but uncaught)  (READ UP!)
+
 Important dates: 
 1) Git concepts: on Day 11, September 26, 2020. 
 2) To do when have time https://codegym.cc/quests/lectures/questcore.level05.lecture12 - Request parser
 - https://codegym.cc/quests/lectures/questcore.level07.lecture10 - List implementation 
 3) Java execution process:
-- Source code (file.java) -> Java compiler -> Byte code -> Java interpreter -> Machine code.
+- Source code (file.java) -> Java compiler (javac) -> Byte code (file.class) -> in (JVM now) Class loader -> Byte verifier -> (JRE now) Interpreter or JIT compiler -> Convert to Machine code.
 Terminology:
 4) Interesting problem about UncaughtExceptionHandler: https://codegym.cc/quests/lectures/questcore.level06.lecture13 (Last exercise) + https://medium.com/@yosimizrachi/advanced-exception-handling-thread-uncaughtexceptionhandler-c72e013da092 - Look at October 12 for some explanation
 5) Volatile vs Synchronized https://stackoverflow.com/questions/3519664/difference-between-volatile-and-synchronized-in-java
