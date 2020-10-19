@@ -571,7 +571,7 @@ Today's Progress: CRUD operation!
 
 Thoughts: Some practice with Crud
 
-### Day 27: October 17, 2020
+### Day 27: October 18, 2020
 
 **Today's Progress**: 
 
