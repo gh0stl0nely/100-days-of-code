@@ -571,8 +571,8 @@ Today's Progress: CRUD operation!
 
 Thoughts: Some practice with Crud
 
-### Day 27: October 18, 2020
+### Day 27: October 19, 2020
 
-**Today's Progress**: 
+**Today's Progress**: More CSS. Finished task assigned in 2 hours. Pretty good
 
-**Thoughts:**:
+**Thoughts:**: CSS skill has improved!
