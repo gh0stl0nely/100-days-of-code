@@ -576,3 +576,44 @@ Thoughts: Some practice with Crud
 **Today's Progress**: More CSS. Finished task assigned in 2 hours. Pretty good
 
 **Thoughts:**: CSS skill has improved!
+
+### Day 28: October 20, 2020
+
+**Today's Progress**: Switched gear to React Native 
+- Fixed some CSS bug
+- Get started with React Native. Finished setting up project and development environment.
+- Container in React Native = View
+- Wrapping ScrollView around a list allows it to scroll, but if you use FlatList Component (preferred), then it will automatically allow the list to be scrollable and **SUPPORT A FEATURE SIMILAR TO LAZY LOADING (If scroll then loads if not then no).
+
+<FlatList >
+  data={data}
+ renderItem={({ item }) => ( <Text ...props></Text> )
+ </FlatList>
+ 
+ - TouchableComponents -> You can wrap a button or something around this for it to be touchable
+ - Alert -> Alert.alert(`TITLE`, `TEXT to display`, {} ) => Third is an object with different keys like text, onPress(), ... 
+ - TouchableWithouFeedback + Keyboard.dismiss() -> Wrap this around a big child so whenever you click away from that child, the keyboard is dismissed. 
+ **FLEX BOX**: https://www.youtube.com/watch?v=R2eqAgR_KlU&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=14
+ const style = StyleSheet.create({
+   containerClass: {
+     flex: 1, -> This class allows the component to be flexible and flex its height for entire screen! 
+     
+     flexDirection: 'column' or 'row' (column means child items are stacked on top of each other whereas row is next to each other side by side)
+     // Basically column makes main axis as Y axis and row makes main axis as X axis.
+     
+     justifyContent: : center or flex end or flex start(default) or space-around (even left and right space for leftward and rightward item) or space-between (only left and right space for other items except for leftward and rightward item) -> Determine how spreads things out on MAIN AXIS
+     
+     alignItems: center (around cross axis) or flex start, flex end -> Determine how spreads things out on CROSS AXIS (opposite of main axis) ,so if flexDirection is row then cross axis is column
+       
+   }
+ })
+ - Screens: Just like a page in term of mobile! 
+ - Using custom font: import * as Font from 'expo-font'. Font
+ => const getFonts = Font.loadAsync({
+   font1: require('../assets/font);
+ });
+ 
+ => Can also tell the component whether the font has finished loaded and THEN render by `import { Apploading} from 'expo'` => <AppLoading startAsync={getFonts} onFinish={() => setComponenToRenderFromUseState(true) />, => This will reload the component and show it 
+ => Once the component is rendered then that component can use those custom font loaded in StyleSheet.create(); 
+
+**Thoughts:**:
