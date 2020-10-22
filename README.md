@@ -617,3 +617,9 @@ Thoughts: Some practice with Crud
  => Once the component is rendered then that component can use those custom font loaded in StyleSheet.create(); 
 
 **Thoughts:**:
+
+### Day 29: October 21, 2020
+
+**Today's Progress**: Did React Native. Debounce function can be used with Async as well :)
+
+**Thoughts:**: Getting started with React Native! A rough start without much guidance tho.
