@@ -623,3 +623,9 @@ Thoughts: Some practice with Crud
 **Today's Progress**: Did React Native. Debounce function can be used with Async as well :)
 
 **Thoughts:**: Getting started with React Native! A rough start without much guidance tho.
+
+### Day 30: October 22, 2020
+
+**Today's Progress**: Did React Native. 
+
+**Thoughts:**: More learning with React Native and Flex Box!
