@@ -629,3 +629,15 @@ Thoughts: Some practice with Crud
 **Today's Progress**: Did React Native. 
 
 **Thoughts:**: More learning with React Native and Flex Box!
+
+### Day 31: October 23, 2020
+
+**Today's Progress**: Typecasting from char -> numeric value like (int) will convert the char (letter) to its ASCII value. 
+
+**Thoughts:**:
+
+### Day 32: October 24, 2020
+
+**Today's Progress**: React Native, useFocusEffect, allowing android to access camera by adding to AndroidManifest.xml
+
+**Thoughts:**: Did some bug fix and useFocusEffect :) 
