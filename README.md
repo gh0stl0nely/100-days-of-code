@@ -641,3 +641,14 @@ Thoughts: Some practice with Crud
 **Today's Progress**: React Native, useFocusEffect, allowing android to access camera by adding to AndroidManifest.xml
 
 **Thoughts:**: Did some bug fix and useFocusEffect :) 
+
+### Day 33: October 25, 2020
+
+**Today's Progress**: What is AWS? AWS is a product that provides suite of cloud computing services including database, lamda function 
+- DynamoDB vs AWS S3: DynamoDB is essentially a NoSQL database, whereas AWS S3 is a bucket storage (of files). AWS S3 is a massive NoSQL database with Key as filename and Value as values of the file. DynamoDB is a NoSQL database, and can deal with **SEMI STRUCTURED DATA**. 
+-> AWS S3: Store data as Object and FILES in **BUCKET**. We can configure who has the read or write or delete from the Bucket. Usually S3 objects are json, jl, csv, text, zip, jpeg, png, xlsx.  
+-> DynamoDB:
+-> AWS Lamda Function: The core features of AWS lamda are these function can be waited and triggered on **EVENTS**.
+
+**Thoughts:**: Did some bug fix and useFocusEffect :) 
+
