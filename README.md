@@ -649,6 +649,7 @@ Thoughts: Some practice with Crud
 -> AWS S3: Store data as Object and FILES in **BUCKET**. We can configure who has the read or write or delete from the Bucket. Usually S3 objects are json, jl, csv, text, zip, jpeg, png, xlsx.  
 -> DynamoDB:
 -> AWS Lamda Function: The core features of AWS lamda are these function can be waited and triggered on **EVENTS**.
+-> Web hosting: You will need a domain name and a hosting provider. A hosting provider provides hosting on the cloud (their own server) that stores OUR file. The Domain name will points to that address of the hosting server, and that server will response with our frontend files. 
 
-**Thoughts:**: Did some bug fix and useFocusEffect :) 
+**Thoughts:**: 
 
