@@ -21,6 +21,9 @@ Terminology:
 https://www.tutorialspoint.com/object-level-lock-vs-class-level-lock-in-java#:~:text=Every%20class%20in%20Java%20has,synchronized%20method%20of%20that%20class.
 9) How does computer work under the hood ? (Signal from mouth click -> I/O sub system -> CPU -> Fetch instruction from memory -> Execute) https://codegym.cc/quests/lectures/questcore.level07.lecture09
 10) Why is HashMap **NOT** thread-safe? Remember, HashMap uses a dynamic array under the hood and uses hash function given the key to find the index inside that dynamic array that stores the value. Whenever a new item is added (put) onto the hashmap, the internal array may call `array.resize()`. But if there are multiple threads accessing the same hash map, the array may be under going **resizing**, so the new array is practically EMPTY and so calling get() will return null => **THREAD UNSAFE**
+11) Serialize vs Deserialize: When transmitting data or storing them in a file, the data are required to be **byte strings**, but complex objects are seldom in this format. Serialization can convert these complex objects into byte strings for such use. After the byte strings are transmitted, the receiver will have to recover the original object from the byte string. This is known as deserialization.
+
+
 
 ----------
 - Multithreading:
@@ -650,6 +653,22 @@ Thoughts: Some practice with Crud
 -> DynamoDB:
 -> AWS Lamda Function: The core features of AWS lamda are these function can be waited and triggered on **EVENTS**.
 -> Web hosting: You will need a domain name and a hosting provider. A hosting provider provides hosting on the cloud (their own server) that stores OUR file. The Domain name will points to that address of the hosting server, and that server will response with our frontend files. 
+
+**Thoughts:**: 
+
+### Day 34: October 26, 2020
+
+**Today's Progress**: Information about React Native
+
+- React Native: Under the hood, React Native utilizes **NATIVE THREAD, Javascript Thread and The Bridge** 
+=> Native Thread helps to run Java, Kotlin, Objective-C, Swift
+=> Javascript Thread runs animation and other UI Javascript components
+=> The Bridge is the "bridge" that facilitates communication between Native and JS Thread
+**PERFORMANCE ISSUE OCCURS WHEN ONE THREAD PASSES TASK TO ANOTHER THREAD VIA BRIDGE -> SLOW DOWN** 
+
+1) Memory Leak: When scrolling, there isn't enough RAM so these two threads passing tasks to each other => Degrade performance.
+
+
 
 **Thoughts:**: 
 
