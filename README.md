@@ -22,7 +22,8 @@ https://www.tutorialspoint.com/object-level-lock-vs-class-level-lock-in-java#:~:
 9) How does computer work under the hood ? (Signal from mouth click -> I/O sub system -> CPU -> Fetch instruction from memory -> Execute) https://codegym.cc/quests/lectures/questcore.level07.lecture09
 10) Why is HashMap **NOT** thread-safe? Remember, HashMap uses a dynamic array under the hood and uses hash function given the key to find the index inside that dynamic array that stores the value. Whenever a new item is added (put) onto the hashmap, the internal array may call `array.resize()`. But if there are multiple threads accessing the same hash map, the array may be under going **resizing**, so the new array is practically EMPTY and so calling get() will return null => **THREAD UNSAFE**
 11) Serialize vs Deserialize: When transmitting data or storing them in a file, the data are required to be **byte strings**, but complex objects are seldom in this format. Serialization can convert these complex objects into byte strings for such use. After the byte strings are transmitted, the receiver will have to recover the original object from the byte string. This is known as deserialization.
-
+12) Mark and Sweep Algorith - JS Garbage Collection goes through the code, mark all **GLOBAL VARIABLES** as Active so it wont be garbage collected. This can lead to memmory **LEAK** because if we have very large unused global variables, it will occupy the memory and never be GC'd. !! 
+12b) To handle Memory leak, you can use **CACHING** - Basicaly calculate computing-heavy 
 
 
 ----------
@@ -667,8 +668,6 @@ Thoughts: Some practice with Crud
 **PERFORMANCE ISSUE OCCURS WHEN ONE THREAD PASSES TASK TO ANOTHER THREAD VIA BRIDGE -> SLOW DOWN** 
 
 1) Memory Leak: When scrolling, there isn't enough RAM so these two threads passing tasks to each other => Degrade performance.
-
-
 
 **Thoughts:**: 
 
