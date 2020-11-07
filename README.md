@@ -24,7 +24,11 @@ https://www.tutorialspoint.com/object-level-lock-vs-class-level-lock-in-java#:~:
 11) Serialize vs Deserialize: When transmitting data or storing them in a file, the data are required to be **byte strings**, but complex objects are seldom in this format. Serialization can convert these complex objects into byte strings for such use. After the byte strings are transmitted, the receiver will have to recover the original object from the byte string. This is known as deserialization.
 12) Mark and Sweep Algorith - JS Garbage Collection goes through the code, mark all **GLOBAL VARIABLES** as Active so it wont be garbage collected. This can lead to memmory **LEAK** because if we have very large unused global variables, it will occupy the memory and never be GC'd. !! 
 12b) To handle Memory leak, you can use **CACHING** - Basicaly calculate computing-heavy 
+12c) To prevent memory leak: You can set the **UNUSED VARIABLE** to **NULL** , even for DOM referenced variable!! 
+12d) When listening to an event in which a callback depends on a **GLOBAL VARIABLE**, you would need to make sure if you don't need the listener anymore, just **REMEMBER TO REMOVE IT**
+12e) Closures are so smart that they can remember the variables kept in its parent scope and import it in its scope making them usable. That’s clever. But this parent scope isn’t kept in the space they are in the memory. => Basically means that if a parent function defines two variables and return another function (closuer) that returns one of the variable, then the remaining variable will be MEMORY!!!! 
 
+13) Why do we need binary data? Because each operating system is different, so we need a way to exchange **PLATFORM + LANGUAGE NEUTRAL DATA** to be sent across these platform. Once we send from one machine to another, the binary data will be reversed/ deserialized on the destination machine. 
 
 ----------
 - Multithreading:
@@ -668,6 +672,14 @@ Thoughts: Some practice with Crud
 **PERFORMANCE ISSUE OCCURS WHEN ONE THREAD PASSES TASK TO ANOTHER THREAD VIA BRIDGE -> SLOW DOWN** 
 
 1) Memory Leak: When scrolling, there isn't enough RAM so these two threads passing tasks to each other => Degrade performance.
+2) Memory Leak (Part 2): When listening to an event in which a callback depends on a **GLOBAL VARIABLE**, you would need to make sure if you don't need the listener anymore, just **REMEMBER TO REMOVE IT** .
+
+- Differences between JSON and YML: So they are both data serialization FORMAT that store **human readable data to be which were COMPLEX DATA STRUCTURE that were serialized into byte streams to be **TRANSFERRED or STORED** . JSON is more common than YMAL. JSON is basically { }. YMAL starts with `---` and ends with `...` (ends with .yml). 
+
+Where JSON > YMAL: Generally consented to be used among web application because easier to parse. 
+Where YMAL > JSON: Comment feature is available only in YAML with # and NOT JSON. That is why YMAL is used in Docker or ELASTICSEARCH for configuration files. Also YMAL can reference other object types and perform recursion to write data. 
+
+https://levelup.gitconnected.com/json-vs-yaml-6aa0243aefc6
 
 **Thoughts:**: 
 
