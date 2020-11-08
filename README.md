@@ -683,3 +683,13 @@ https://levelup.gitconnected.com/json-vs-yaml-6aa0243aefc6
 
 **Thoughts:**: 
 
+### Day 35: November 7, 2020
+
+**Today's Progress**: Popular services on AWS:
+- EC2 : This is like a raw server and **YOU CAN S** you can configure anytime to be Web Server, or any other server you want. (**YOU DO FROM BEGINNING BUT REMOTELY**)
+- Elastic Beanstalk: Just like EC2, but you cannot access OS but you can still configure stuff. You can use this to deploy application automatically. (**YOU DO FROM BEGINNING BUT WITH OS SETUP?)
+- Lambda: Autoamted of EC2 as well, but you cannot access OC or even configure stuff... But just upload the code and execute (**YOU DONT EVEN NEED TO CONFIGURE ANYTHING...**, just write and upload your code and things will be good for you) - BUT you **CANNOT DEPLOY APPLICATION WITH LAMBDA**. -> Hence SERVERLESS... 
+
+- AWS SDK: We can use these built-in tools + API on AWS to connect and utilize the services that AWS provides. So we don't even need to connect or integrate with AWS to start using their services. 
+
+**Thoughts:**:
