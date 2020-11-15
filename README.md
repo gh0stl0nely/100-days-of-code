@@ -700,6 +700,13 @@ https://levelup.gitconnected.com/json-vs-yaml-6aa0243aefc6
 - S3: A bucket is a container that stores a bunch of objects that are FILES. You can literally host your static site files on S3 buckets and it can be served everywhere in the world. REMEMBER **The domain of your site MUST BE the same name as your S3 Bucket i.e: https:/www.khoi.com** => Because when user requests the site from S3, S3 will receive the request and uses `HOST REQUEST HEADER` in the request to route to the bucket. S3 is highly scalable and maintainable, but make sure since it is public (anybody can request pages from it), you must make sure there is no configuration errors as to be prone for attack :) 
 - Terminal: A software that allows you to communicate with Operating System :) For instance, I just install AWS CLI to interact with my OS regarding AWS. 
 - AWS RDB: Is a service that allows users to create **DB INSTANCE** - an `isolate database environment`. Each **DB INSTANCE** allows user to create multiple databases. '
+- AWS Cloudfront: Is a content delivery network
 - VPC (Virtual Private Cloud): Think of it as a big container where different AWS service shares data and talks to each other. AWS RDB service will talk to a AWS lambda. RDB service has **private** access, but AWS API Gateway may have public access (therefore subnet) to the internet :)
+i) 
+ii) Subnet:
+iii) 
+
+How to use Amazon Secret Manager with Lamda:
+- https://aws.amazon.com/blogs/security/how-to-securely-provide-database-credentials-to-lambda-functions-by-using-aws-secrets-manager/
 
 **Thoughts:**:
