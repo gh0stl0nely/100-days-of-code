@@ -710,3 +710,23 @@ How to use Amazon Secret Manager with Lamda:
 - https://aws.amazon.com/blogs/security/how-to-securely-provide-database-credentials-to-lambda-functions-by-using-aws-secrets-manager/
 
 **Thoughts:**:
+
+### Day 37: November 21, 2020
+- What is Linux? Linux is a kernel that allows **communication between software and hardware** => In a way Linux performs most task of an operation system (SEE BELOW)
+=> `Linux standard distribution uses a GNU library for runtime (like on Chrome, Firefox, Desktop etc...) but ANDROID DOES NOT USE THAT GNU LIBRARY `. Which means that if you take an executable binary file from a laptop (with Linux standard kernel) and run on an Android phone then it **WILL NOT** work because Android has its own C library and it is NOT **BINARY COMPATIBLE**. 
+
+=> Lesson: Because Android OS has its own library for run time built on top of the Linux kernel versus the standard linux distribution of Chrome, Firefox, destkop, this is the reason why Mobile app is not compatible to run on Desktop or Laptop
+
+LINUX ON ITS OWN IS USELESS -> SO IT NEEDS SOME SORT OF TOOL TO WORK WITH IT (AS EXAMPLE, a command line and all those C runtime libraries above ^^ :) 
+
+. Linux Kernal can 1) Manages resource and 2) Perform upgrade to fit the need of user and bug fix but DOES NOT HAVE an user interface. => Therefore we need a user interface tool such as Bash Shell/ Command Line to type command that talks and controls the kernel. Operation system is a system program that also manages resources such as file system, I/O system, networking, task scheduling, memory etc... 
+
+- ANDROID uses LINUX KERNEL for those resource management tasks. 
+=> When we turn up an android device, we also turn up a Linux Kernel as well.
+
+**WHAT IS AN EXECUTABLE** -> AN executble (.exe) is a compiled file that can be used to tell your device or computer what to do :) Basically machine code already. Execuable cannot be read because its compiled, unlike data file. An execuatable file can perhaps tell the OS to provide memory for the program, load the data, schedule threads, setup the stack trace for function calls, etc... 
+
+
+
+
+
