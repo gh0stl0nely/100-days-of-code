@@ -726,6 +726,18 @@ LINUX ON ITS OWN IS USELESS -> SO IT NEEDS SOME SORT OF TOOL TO WORK WITH IT (AS
 
 **WHAT IS AN EXECUTABLE** -> AN executble (.exe) is a compiled file that can be used to tell your device or computer what to do :) Basically machine code already. Execuable cannot be read because its compiled, unlike data file. An execuatable file can perhaps tell the OS to provide memory for the program, load the data, schedule threads, setup the stack trace for function calls, etc... 
 
+------ 
+AWS: 
+- Root user can create IAM users. All IAM user/account belongs to the root user. We can use this option to create an organization. Each user can then be allowed **PERMISSIONS** 
+
+- AWS SAM (Serverless Application MOdel): Is a transform, aka an ABSTRACTION in front of CloudFormation. 
+- Serverless Framework: An open source framework creating event driven function on AWS, Azure etc... 
+
+The similarity between SAM and Serverless is that both transform backs to Cloudformation but by WRITING LESS CODE. 
+
+THe differences are:
+1) Serverless allows for only **DEPLOYING FUNCTION TO DIFFERENT CLOUD PROVIDER** while AWS SAM allows for deploying database (DynamoDB), API Gateway and lambda AWS function to cloud provider. AWS SAM **LOCAL** even allows developer to test Lambda function as well locally **WITHOUT DEPLOYING TO AWS**. 
+
 
 
 
