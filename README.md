@@ -738,7 +738,31 @@ The similarity between SAM and Serverless is that both transform backs to Cloudf
 THe differences are:
 1) Serverless allows for only **DEPLOYING FUNCTION TO DIFFERENT CLOUD PROVIDER** while AWS SAM allows for deploying database (DynamoDB), API Gateway and lambda AWS function to cloud provider. AWS SAM **LOCAL** even allows developer to test Lambda function as well locally **WITHOUT DEPLOYING TO AWS**. 
 
+------
+What is a hypervisor?
+- A hypervisor is a software that is stood on top of the physical server that allows for a platform to run "VIRTUALIZATION" - basically means allowing us to spin up different VIRTUAL MACHINE (basically like a computer that has its OWN operating system) and all VM run on that same hypervisor. The hypervisor will then **ALLOCATE resource such as Memory, IO, disc space** on the physical server to be used by these VM. 
+- Benefits 
++ Cost saving: You do not have to buy or manage many server.
++ Platform independent (BEST) - 
++ Reduced downtime - If one server is down, all VMs can be moved to another server EASILY! 
++ Speed - Spin up a VM is very easy and fast, so if devleoper wants to have a dev or test environment, then that is fairly quick. 
 
+----
+Why is VMs not good?
+- Because when you spin up each virtual machine for your app while scaling, it takes up more and more resources on the physical server.
+- 
 
+The main difference is really 
+1) Isolation: VMs have its own OS and it is totally isolated, no other VM knows about each other. Whereas Containers, on the other hand, shares the operating system and kernel so they understand the processess happening. Remember Containers already have all libraries and binaries that can be used to use all those guest operating system, so in order to interact with the host OS, it is not a problem. 
+=> VM (machine isolation) vs Docker (processes isolation) 
 
+2) Resources access: Hypervisor is the one that manages all the resources allocation for each VMS. Whereas Containers have **namespaces** and **cgropus**, so namespaces allow each container seems like it has its own OS and cgroups are used for monitoring and limiting each containers resources access. 
 
+3) VM are very flexible because we are building them out of a server so we can tell how much processes and RAM each VM will do. Whereas Containers are highly portable (since it has a DOKCERFILE of how each container SHOULD BE BUILT, how to run each container, what library is necessary and what time is necessary to build it.. We can then use that Docker File, runs it on our machine to spin up our application. You can store that Dockerfile in our repo and can easily run it on different machine (w/ different OS and no hardware limitation because we ALREADY told Dockerfile all the instructions needed to spin up that container. 
+
+Two types of hypervisor
+1) Type 1: Bare metal hypervisor, built directly into the hardware of the physical server 
+2) Type 2: Hosted hypervisor - there is A layer of host OS between physical server and hypervisor. 
+---
+SDK 
+- Basically a tool box of codes that **CALL API for you** . For instance, if we use Java SDK, we have a method call getData, then that tool will call the API for us to get the data (just an example) and it will return to us a response. => Basically SDK provides an ABSTRACTED way so if we want to perform a certain operation, we dont need to know about those thousands lines of code to get what we need for that operation. 
