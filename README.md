@@ -724,6 +724,16 @@ LINUX ON ITS OWN IS USELESS -> SO IT NEEDS SOME SORT OF TOOL TO WORK WITH IT (AS
 - ANDROID uses LINUX KERNEL for those resource management tasks. 
 => When we turn up an android device, we also turn up a Linux Kernel as well.
 
+**WHY LINUX**: Because it is open source and free :) -> You can make the source code of Linux and make changes to it and make it better on your own. Ubuntu as well :) 
+
+**What is Ubuntu**: Ubuntu is an Linux Distributino that is VERY FAMOUS. A Linux Distribution is essentially a list of tools that have **LINUX KERNEL** at its CORE. GNU is a list of tools that built around Linux Kernel in order for it to run. Linux on its own is just a command line :| No GUI. So Ubuntu adds in just that -> a bunch of utilities, software and GUI. 
+
+Ubuntu is just a FLAVOUR of GNU/Linux.
+
+Also, Ubuntu is **NOT** hardware specific -> Which mean you can run Ubuntu on MacOS or Window, whereas you can only run MacOS on Apple hardware
+
+Lesson: THink of Linux Kernel as an engine. Ubuntu Distro / Distribution is tool that helps Linux Kernel works. 
+
 **WHAT IS AN EXECUTABLE** -> AN executble (.exe) is a compiled file that can be used to tell your device or computer what to do :) Basically machine code already. Execuable cannot be read because its compiled, unlike data file. An execuatable file can perhaps tell the OS to provide memory for the program, load the data, schedule threads, setup the stack trace for function calls, etc... 
 
 ------ 
